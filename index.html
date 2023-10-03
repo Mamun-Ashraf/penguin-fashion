@@ -5,15 +5,90 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Penguin Fashion</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Daisy UI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.8.3/dist/full.css" rel="stylesheet" type="text/css" />
+    <!-- Tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        penguin: '#FABE4C',
+                        buynow1: '#A4BC46',
+                        buynow2: '#85A019',
+                    },
+                    fontFamily: {
+                        roboto: 'Roboto, sans-serif',
+                        bebas: 'Bebas Neue, sans-serif',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
-    <!-- header section -->
-    <header>
+<style>
+    /* Google font Roboto */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+    /* Google font Bebas Neue */
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+</style>
+
+<body class="font-roboto">
+    <!-- header section -->
+    <header class="bg-[#FFFBF0]">
+        <!-- NavBar -->
+
+        <div class="flex justify-around items-center py-6 bg-transparent">
+            <div class="flex items-center">
+                <div class="dropdown">
+                    <label tabindex="0" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium">
+                        <li><a>Home</a></li>
+                        <li><a>Products</a></li>
+                        <li><a>About us</a></li>
+                        <li><a>Contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img class="w-1/4" src="images/icons/logo.png" alt="">
+                </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="font-medium menu-horizontal gap-5">
+                    <li><a>Home</a></li>
+                    <li><a>Products</a></li>
+                    <li><a>About us</a></li>
+                    <li><a>Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Banner -->
+        <div class="container mx-auto md:flex justify-around items-center pb-32">
+            <div class="">
+                <h2 class="uppercase font-bebas text-7xl"><span class="text-penguin">Be the penguins</span><br>of winter
+                </h2>
+                <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Doloremque, aspernatur.
+                </p>
+                <button class="uppercase text-white bg-gradient-to-r from-buynow1 to-buynow2 px-8 py-4 rounded-lg">
+                    <img class="me-2 inline w-6 h-6" src="images/icons/shopping-cart 1.png" alt="">
+                    Buy Now
+                </button>
+            </div>
+            <div>
+                <img class="w-3/4 lg::w-full" src="images/model/model.png" alt="">
+            </div>
+        </div>
     </header>
     <!-- main section -->
     <main>
@@ -23,10 +98,6 @@
     <footer>
 
     </footer>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
